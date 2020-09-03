@@ -19,7 +19,7 @@ include(${CMAKE_SOURCE_DIR}/../cmake/download_test_data.cmake)
 
 # benchmark binary
 add_executable(json_benchmarks src/benchmarks.cpp)
-target_compile_features(json_benchmarks PRIVATE cxx_std_11)
+#target_compile_features(json_benchmarks PRIVATE cxx_std_11)
 target_link_libraries(json_benchmarks benchmark ${CMAKE_THREAD_LIBS_INIT})
 add_dependencies(json_benchmarks download_test_data)
 target_include_directories(json_benchmarks PRIVATE ${CMAKE_BINARY_DIR}/include)
